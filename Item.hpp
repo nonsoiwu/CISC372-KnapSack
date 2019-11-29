@@ -41,6 +41,9 @@ class ItemList{
     public:
         ItemList();             //Constructor
         void addItem(Item &i);  //Adds Item to list
+        void show();
 };
+
+ItemList createMock1();
 
 #endif /* ITEM_HPP */
