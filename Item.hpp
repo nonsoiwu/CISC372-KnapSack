@@ -18,6 +18,7 @@ using namespace std;
  * Item (or Object) for the KnapSack to hold
  */
 class Item{
+    friend class Knapsack;
     friend class ItemList;
     string name;    //Optional name to identify an item
     int weight;     //Associated weights of an item
@@ -34,9 +35,12 @@ class Item{
  * Acts as a list for classes of 'Item'
  */
 class ItemList{
+    friend class Knapsack;
     Item *first;    //Address to the first item in list
     Item *last;     //Address to the last item in list
     int size;       //Size of list
+    int totalValue;
+    int totalWeight;
 
     public:
         ItemList();             //Constructor

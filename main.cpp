@@ -13,6 +13,8 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
     ItemList i = createMock1();
+    Knapsack ks = Knapsack();
     i.show();
+    ks.solve(&i, 10);
     return 0;
 }

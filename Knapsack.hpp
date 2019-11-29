@@ -19,6 +19,10 @@ using namespace std;
  * Functions for the knapsack problem
  */
 
-void solve(ItemList *itemlist, int capacity); //1 function that solves the knapsack problem
+class Knapsack{
+    public:
+        void solve(ItemList *itemlist, int capacity); //1 function that solves the knapsack problem
+        int solveR(ItemList *itemlist, Item *n, int capacity);
+};
 
 #endif /* KNAPSACK_HPP */

@@ -32,6 +32,8 @@ ItemList::ItemList(){
     first = NULL;
     last = NULL;
     size = 0;
+    totalValue = 0;
+    totalWeight = 0;
 }
 
 void ItemList::addItem(Item &item){
@@ -40,9 +42,12 @@ void ItemList::addItem(Item &item){
         last = &item;
     }else{
         last->next = &item;
+        item.prev = last;
         last = &item;
     }
     size += 1;
+    totalValue += item.value;
+    totalWeight += item.weight;
 }
 
 void ItemList::show(){
