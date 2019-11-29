@@ -1,3 +1,11 @@
+/**
+ * File: Item.hpp
+ * Authors: Korey Mitchell, Matt Grossman, and Nonso Iwu
+ * Course: CISC372
+ * Instructor: Sunita Chandrasekaran
+ * Created on November 29, 2019
+ */
+
 #include <iostream>
 #include <string.h>
 #include <stdlib.h>
@@ -6,7 +14,7 @@ using namespace std;
 /**
  * Item (or Object) for the KnapSack to hold
  */
- 
+
 class Item{
     string name;    //Optional name to identify an item
     int weight;     //Associated weights of an item

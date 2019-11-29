@@ -1,3 +1,11 @@
+/**
+ * File: Knapsack.hpp
+ * Authors: Korey Mitchell, Matt Grossman, and Nonso Iwu
+ * Course: CISC372
+ * Instructor: Sunita Chandrasekaran
+ * Created on November 29, 2019
+ */
+
 #include <iostream>
 #include <string.h>
 #include <stdlib.h>
