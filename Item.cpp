@@ -46,7 +46,7 @@ void ItemList::addItem(Item &item){
 }
 
 void ItemList::show(){
-    cout << "Size: " << size;
+    cout << "Size: " << size << "\n";
     Item *temp = first; 
     while(temp != NULL)
     {
