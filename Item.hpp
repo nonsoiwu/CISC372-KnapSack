@@ -18,9 +18,12 @@ using namespace std;
  * Item (or Object) for the KnapSack to hold
  */
 class Item{
+    friend class ItemList;
     string name;    //Optional name to identify an item
     int weight;     //Associated weights of an item
     int value;      //Associated values of an item
+    Item *prev;     //previous item in list
+    Item *next;     //next item in list
 
     public:
         Item();                         //Constructor
@@ -30,13 +33,14 @@ class Item{
 /**
  * Acts as a list for classes of 'Item'
  */
-class ItemNode{
-    Item *i;            //Address to the item this node references
-    ItemNode *next;     //Address to the next item in list
+class ItemList{
+    Item *first;    //Address to the first item in list
+    Item *last;     //Address to the last item in list
+    int size;       //Size of list
 
     public:
-        ItemNode();         //Constructor
-        ItemNode(Item *it);  //Constructor; takes the address of an Item class
+        ItemList();             //Constructor
+        void addItem(Item &i);  //Adds Item to list
 };
 
 #endif /* ITEM_HPP */

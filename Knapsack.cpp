@@ -8,16 +8,6 @@
 
 #include "Knapsack.hpp"
 
-Knapsack::Knapsack(){
-    items = NULL;
-    capacity = 0;
-}
-
-Knapsack::Knapsack(int c){
-    items = NULL;
-    capacity = c;
-}
-
 void solve(){
-    
+
 }

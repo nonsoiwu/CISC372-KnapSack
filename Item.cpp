@@ -8,24 +8,39 @@
 
 #include "Item.hpp"
 
+//ITEM
+
 Item::Item(){
     name = "";
     weight = 0;
     value = 0;
+    next = NULL;
+    prev = NULL;
 }
 
 Item::Item(string n, int w, int v){
     name = n;
     weight = w;
     value = v;
+    next = NULL;
+    prev = NULL;
 }
 
-ItemNode::ItemNode(){
-    i = NULL;
-    next = NULL;
+//ITEM LIST
+
+ItemList::ItemList(){
+    first = NULL;
+    last = NULL;
+    size = 0;
 }
 
-ItemNode::ItemNode(Item *it){
-    i = it;
-    next = NULL;
+void ItemList::addItem(Item &item){
+    if (size == 0){
+        first = &item;
+        last = &item;
+    }else{
+        last->next = &item;
+        last = &item;
+    }
+    size += 1;
 }

@@ -16,19 +16,9 @@ using namespace std;
 #define KNAPSACK_HPP
 
 /**
- * Knapsack class for the knapsack problem
+ * Functions for the knapsack problem
  */
 
-class Knapsack{
-    ItemNode *items;
-    int capacity;   //Capacity number s
-
-    public:
-        Knapsack();         //Constructor
-        Knapsack(int c);    //Constructor. capacity attribute is set to c
-};
-
-
-void solve(); //1 function that solves the knapsack problem
+void solve(ItemList *itemlist, int capacity); //1 function that solves the knapsack problem
 
 #endif /* KNAPSACK_HPP */
