@@ -12,17 +12,23 @@
 #include "Item.hpp"
 using namespace std;
 
+#ifndef KNAPSACK_HPP
+#define KNAPSACK_HPP
+
 /**
  * Knapsack class for the knapsack problem
  */
 
 class Knapsack{
-    ItemNode items;
+    ItemNode *items;
     int capacity;   //Capacity number s
 
     public:
-        Knapsack(int c); //Constructor. capacity attribute is set to c
+        Knapsack();         //Constructor
+        Knapsack(int c);    //Constructor. capacity attribute is set to c
 };
 
 
-void::solve(); //1 function that solves the knapsack problem
+void solve(); //1 function that solves the knapsack problem
+
+#endif /* KNAPSACK_HPP */
