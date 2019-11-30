@@ -23,6 +23,8 @@ class Knapsack{
     public:
         void solve(ItemList *itemlist, int capacity); //1 function that solves the knapsack problem
         int solveR(ItemList *itemlist, Item *n, int capacity);
+
+        void solve2(ItemList *itemlist, int capacity);
 };
 
 #endif /* KNAPSACK_HPP */

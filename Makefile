@@ -9,4 +9,4 @@ run:
 	./$(EXEC).exe
 
 clean:
-	rm -rf $(EXEC)
+	rm -rf $(EXEC).exe

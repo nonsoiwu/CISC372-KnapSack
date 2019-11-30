@@ -35,3 +35,29 @@ int Knapsack::solveR(ItemList *itemlist, Item *i, int capacity){
         //tmp1 = KS(n-1, C)
         //tmp2 = value of item + KS(n-1, capacit - weight of )
 }
+
+void Knapsack::solve2(ItemList *itemlist, int capacity){
+    int K[itemlist->size+1][capacity+1];
+    Item *temp = itemlist->first;
+
+    for (size_t i = 0; i <= itemlist->size; i++)
+    {
+        for (size_t j = 0; j <= capacity; j++)
+        {
+            if(i==0 || j==0){
+                K[i][j] = 0;
+            }else if(temp->weight <= j){
+                K[i][j] = max(temp->value + K[i-1][j - temp->weight], K[i-1][j]);
+            }else{
+                K[i][j] = K[i-1][j];
+            }
+        }
+
+        if(i != 0){
+            temp = temp->next;
+        }
+    }
+    
+    cout << K[itemlist->size][capacity];
+    return;
+}
