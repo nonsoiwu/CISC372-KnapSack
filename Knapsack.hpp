@@ -22,9 +22,9 @@ using namespace std;
 class Knapsack{
     public:
         void solve(ItemList *itemlist, int capacity); //1 function that solves the knapsack problem
-        int solveR(ItemList *itemlist, Item *n, int capacity);
+        int solveR(Item *n, int capacity);  //Recursive method O(2^n)
 
-        void solve2(ItemList *itemlist, int capacity);
+        void solve2(ItemList *itemlist, int capacity); //Dynamic Programming method O(n*Capacity)
 };
 
 #endif /* KNAPSACK_HPP */

@@ -9,20 +9,19 @@
 #include "Knapsack.hpp"
 
 void Knapsack::solve(ItemList *itemlist, int capacity){
-    ItemList *dummy = new ItemList();
-    cout << solveR(dummy, itemlist->last, capacity);
+    cout << solveR(itemlist->last, capacity);
 }
 
-int Knapsack::solveR(ItemList *itemlist, Item *i, int capacity){
+int Knapsack::solveR(Item *i, int capacity){
     int result = 0, tmp1, tmp2;
 
     if(i == NULL){
         result = 0;
     }else if(i->weight > capacity){
-        result = solveR(itemlist, i->prev, capacity); 
+        result = solveR(i->prev, capacity); 
     }else{
-        tmp1 = solveR(itemlist, i->prev, capacity);
-        tmp2 = i->value + solveR(itemlist, i->prev, capacity - i->weight);
+        tmp1 = solveR(i->prev, capacity);
+        tmp2 = i->value + solveR(i->prev, capacity - i->weight);
         result = max(tmp1, tmp2);
     }
 
