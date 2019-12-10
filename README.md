@@ -58,5 +58,5 @@ gcc -g generate.cpp -o gen
 This will create a file named "sample5.txt"
 You can now use this file to test the previously built programs!
 
-For example (from outermost folder):
+For example (from outermost folder):\
 ```./Serial/dynamic.exe < ./Generator/sample5.txt``` 
