@@ -34,5 +34,5 @@
 #Stackdump
 *.stackdump
 
-#sample
+#Sample files
 sample*.txt
