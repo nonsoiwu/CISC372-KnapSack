@@ -1,11 +1,11 @@
-# CISC372 - Parallel Computing Project
+# CISC372 Parallel Computing- Knapsack Problem
 ## Authors:
 * Nonso Iwu
 * Korey Mitchell
 * Matt Grossman
 
 ## How to Build:
-There are three executables that need to be built:
+There are three executables that need to be built:\
 ```naive.exe```<br>
 ```dynamic.exe```<br>
 ```parallel.exe ```
@@ -23,10 +23,9 @@ make build
 ```
 
 ## How to Run:
-```./naive.exe```
-```./dynamic.exe```
-and
-```./parallel.exe```
+```./naive.exe```\
+```./dynamic.exe```\
+```./parallel.exe```\
 for the naive, dynamic, and parallel programs respectively.
 
 These programs will prompt you for console input for items for the knapsack problem.\
