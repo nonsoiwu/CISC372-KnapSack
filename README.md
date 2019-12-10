@@ -1,9 +1,10 @@
-# Authors
+# CISC372 - Parallel Computing Project
+## Authors:
 * Nonso Iwu
 * Korey Mitchell
 * Matt Grossman
 
-# How to Build:
+## How to Build:
 There are three executables that need to be built:
 ```naive.exe```<br>
 ```dynamic.exe```<br>
@@ -21,7 +22,7 @@ cd ./Parellel
 make build
 ```
 
-# How to run:
+## How to Run:
 ```./naive.exe```
 ```./dynamic.exe```
 and
@@ -45,7 +46,7 @@ So I problem with 3 item of weights 5, 10, 15 and corresponding values 11, 22, 3
 ```33```  &ensp;&ensp;Value of Item \#3\
 ```5```   &ensp;&ensp;Capacity of Knapsack
 
-# How to generate sample inputs
+## How to Generate Sample Inputs:
 We predicted that this would become inconvenient after a while, so we created a random sample generator.
 
 Here are the commands for building a sample input with size of 5 (from outermost folder):
