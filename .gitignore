@@ -33,3 +33,6 @@
 
 #Stackdump
 *.stackdump
+
+#sample
+sample*.txt
