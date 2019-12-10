@@ -9,7 +9,13 @@
 #include "Knapsack.hpp"
 
 void Knapsack::solve(ItemList *itemlist, int capacity){
-    cout << solveR(itemlist->last, capacity);
+    clock_t begin = clock();
+    int r = solveR(itemlist->last, capacity);
+    clock_t end = clock();
+
+	printf("Optimal value= %d\n", r);
+	double timer = 0.0 + (double)(end-begin)/CLOCKS_PER_SEC;
+	printf("Execution Time: %fs", timer);
 }
 
 int Knapsack::solveR(Item *i, int capacity){
@@ -26,16 +32,10 @@ int Knapsack::solveR(Item *i, int capacity){
     }
 
     return result;
-    //If we are at the last index
-        //return 0???
-    //else if weight of item is more than capacity:
-        //result = solveR(n-1, capacity)
-    //else:
-        //tmp1 = KS(n-1, C)
-        //tmp2 = value of item + KS(n-1, capacit - weight of )
 }
 
 void Knapsack::solve2(ItemList *itemlist, int capacity){
+    clock_t begin = clock();
     int K[itemlist->size+1][capacity+1];
     Item *temp = itemlist->first;
 
@@ -56,7 +56,10 @@ void Knapsack::solve2(ItemList *itemlist, int capacity){
             temp = temp->next;
         }
     }
-    
-    cout << K[itemlist->size][capacity];
+    clock_t end = clock();
+    cout << "Optimal Value" << K[itemlist->size][capacity] << "\n";
+    double timer = 0.0 + (double)(end-begin)/CLOCKS_PER_SEC;
+	printf("Execution Time: %fs", timer);
+
     return;
 }
