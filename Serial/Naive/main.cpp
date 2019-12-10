@@ -34,6 +34,7 @@ int main(int argc, char const *argv[])
 
     //printf("weight %d\n", &weights[i]);
     //printf("values %d\n", &values[i]);
+    printf("Naive:\n");
     printf("Items: %d\n", n);
 	scanf("%d", &W);
     printf("Capacity: %d\n", W);

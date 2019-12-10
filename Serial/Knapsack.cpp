@@ -13,7 +13,7 @@ void Knapsack::solve(ItemList *itemlist, int capacity){
     int r = solveR(itemlist->last, capacity);
     clock_t end = clock();
 
-	printf("Optimal value= %d\n", r);
+	printf("Optimal value: %d\n", r);
 	double timer = 0.0 + (double)(end-begin)/CLOCKS_PER_SEC;
 	printf("Execution Time: %fs", timer);
 }
@@ -57,7 +57,7 @@ void Knapsack::solve2(ItemList *itemlist, int capacity){
         }
     }
     clock_t end = clock();
-    cout << "Optimal Value" << K[itemlist->size][capacity] << "\n";
+    cout << "Optimal Value: " << K[itemlist->size][capacity] << "\n";
     double timer = 0.0 + (double)(end-begin)/CLOCKS_PER_SEC;
 	printf("Execution Time: %fs", timer);
 

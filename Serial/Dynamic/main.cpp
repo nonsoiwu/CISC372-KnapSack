@@ -32,6 +32,7 @@ int main(int argc, char const *argv[])
 		scanf("%d", &values[i]);
 	//Read Max. Weight Capacity of Knapsack
 
+    printf("Dynamic:\n");
     printf("Items: %d\n", n);
 	scanf("%d", &W);
     printf("Capacity: %d\n", W);

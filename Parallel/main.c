@@ -36,7 +36,7 @@ elem **F;
 
 int main()
 {	
-
+	printf("Parallel\n");
 	scanf("%d", &n);
     printf("%d\n", n);
 	weights = (int*)malloc((n+1)*sizeof(int));
